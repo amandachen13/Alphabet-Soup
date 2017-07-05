@@ -22,7 +22,7 @@ Additionally, this project will include:
 
 The game will be played on a single screen that holds the game view, game controls, links to LinkedIn/GitHub, and an instructions modal.
 
-[Game View]('/assets/images/gameview.png')
+! [Game View](https://github.com/amandachen13/Alphabet-Soup/blob/master/assets/images/gameview.png)
 
 ### Architecture & Technologies
 
@@ -36,8 +36,8 @@ I will also need a library of dictionary words with six or less letters.
 
 ### Implementation Timeline
 
-Day 1: Setup the necessary
+Day 1: Setup the necessary modules and configure webpack. Build out the logic of the game and render a basic, playable view.
 
-Day 2:
+Day 2: Style the game view. Smooth out transitions and feedbacks.
 
-Day 3: Style the game view, buttons, and modals. Smooth out transitions.
+Day 3: Style the modals and buttons.
