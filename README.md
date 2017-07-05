@@ -9,10 +9,10 @@ Alphabet-Soup is a word game where players try to spell as many words as they ca
 Users will be able to:
 
 - [ ] Start and reset the game
-- [ ] Shuffle the letters or discard the letters (with a penalty)
+- [ ] Shuffle the letters or discard the letters (with a penalty to their score)
 - [ ] Keep track of their score
 - [ ] View their final score and guessed words in an end game modal (that includes a restart button)
-- [ ] View the game rules and a demo video in a modal
+- [ ] View the game rules and a demo video clip in a modal
 
 Additionally, this project will include:
 
@@ -20,7 +20,7 @@ Additionally, this project will include:
 
 ### Wireframes
 
-The game will be played on a single screen that holds the game view, game controls, links to LinkedIn/GitHub, and an instructions modal.
+The game will be played on a single screen that holds the game view, game controls, links to LinkedIn/GitHub, and an instructions modal. An end game modal will pop up when time runs out with the player's final score and guessed words.
 
 ! [Game View](https://github.com/amandachen13/Alphabet-Soup/blob/master/assets/images/gameview.png)
 
@@ -31,6 +31,7 @@ This project will be implemented with the following technologies:
 - JavaScript
 - HTML
 - CSS
+- Animation Library TBD
 
 I will also need a library of dictionary words with six or less letters.
 
