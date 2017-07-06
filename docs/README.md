@@ -31,6 +31,7 @@ This project will be implemented with the following technologies:
 - JavaScript
 - HTML
 - CSS
+- Canvas
 - Animation Library TBD
 
 I will also need a library of dictionary words with six or less letters.
