@@ -45,13 +45,15 @@ div.title {
   font-weight: bold;
   padding: 10px;
   border-radius: 8px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.075);
 }
 
 #start:active {
   border-style: none;
 }
 #start:focus {
-  outline: none;
+  outline: none
+
 }
 
 #timerCanvas {
@@ -60,7 +62,7 @@ div.title {
 }
 
 div.spoon {
-  margin-top: 10px;
+  margin-top: 13px;
   margin-left: 50px;
 }
 
