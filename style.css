@@ -1,3 +1,7 @@
+html {
+  background-image: url('./assets/images/blue-tablecloth-background.jpg');
+}
+
 body {
   display: flex;
   justify-content: center;
@@ -6,34 +10,58 @@ body {
 div {
   display: flex;
   flex-direction: column;
-  /*width: 610px;
-  height: 310px;*/
+}
+
+canvas {
+  font-family: 'Sniglet', cursive;
+}
+
+@font-face {
+  font-family: 'Sniglet'; 
 }
 
 div.word {
+  background-color: white;
+  border-radius: 8px;
   width: 400px;
   margin: 0 auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 #scoreCanvas {
   border: 1px solid black;
 }
 
+div.bowl-bottom {
+  position: absolute;
+  top: 199px;
+  z-index: -1;
+  width: 610px;
+  height: 300px;
+  border-bottom-left-radius: 1200px;
+  border-bottom-right-radius: 1200px;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
 div.score {
+  background-color: white;
   margin: 0 auto;
   width: 100px;
 }
 
 div.bowl{
   padding-top: 50px;
-  width: 606px;
+  width: 600px;
   height: 310px;
   border-radius: 50%;
-  border: 5px solid black;
+  border: 5px solid white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.01), 0 6px 20px 0 rgba(0, 0, 0, 0.075);
   display: table;
   background-color: darkred;
 }
 
 #wordCanvas {
-  border: 5px solid black;
+
 }
