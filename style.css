@@ -2,23 +2,94 @@ html {
   background-image: url('./assets/images/blue-tablecloth-background.jpg');
 }
 
-body {
-  display: flex;
-  justify-content: center;
-}
-
-div {
-  display: flex;
-  flex-direction: column;
-}
-
 canvas {
   font-family: 'Sniglet', cursive;
 }
 
 @font-face {
-  font-family: 'Sniglet'; 
+  font-family: 'Sniglet';
 }
+
+body {
+  margin-top: 5vw;
+  padding-top: 20px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+div {
+  font-family: 'Sniglet', cursive;
+  display: flex;
+  flex-direction: column;
+}
+
+div.title {
+  width: 250px;
+  font-family: 'Sniglet', cursive;
+  font-size: 72px;
+  font-weight: bold;
+  margin-right: 45px;
+  color: #e8c264;
+  /*text-shadow: 1px 1px 0 rgb(77,162,252) , -1px -1px 0 rgb(77,162,252) , 1px -1px 0 rgb(77,162,252) , -1px 1px 0 rgb(77,162,252) , 4px 4px 8px rgb(44,88,137) , -4px 4px 8px rgb(44,88,137) , 4px -4px 8px rgb(44,88,137) , -4px -4px 8px rgb(44,88,137) ;*/
+
+  /*text-shadow: 3px 3px 0 rgb(101, 179, 227) , 4px 4px 0 rgb(101, 179, 227) , 5px 5px 0 rgb(101, 179, 227) , 6px 6px 0 rgb(101, 179, 227) , 7px 7px 0 rgb(101, 179, 227) , 8px 8px 0 rgb(101, 179, 227) , 9px 9px 0 rgb(101, 179, 227) , 10px 10px 0 rgb(101, 179, 227) , 11px 11px 0 rgb(101, 179, 227) , 12px 12px 0 rgb(101, 179, 227) , 13px 13px 0 rgb(101, 179, 227) , 14px 14px 0 rgb(101, 179, 227) , 15px 15px 0 rgb(101, 179, 227) , 16px 16px 0 rgb(101, 179, 227) , 17px 17px 0 rgb(101, 179, 227) , 18px 18px 0 rgb(101, 179, 227) , 19px 19px 0 rgb(101, 179, 227) , 20px 20px 0 rgb(101, 179, 227) ;*/
+  /*text-shadow: 0 1px 0 rgb(204,204,204) , 0 2px 0 rgb(201,201,201) , 0 3px 0 rgb(187,187,187) , 0 4px 0 rgb(185,185,185) , 0 5px 0 rgb(170,170,170) , 0 6px 1px rgba(0,0,0,0.0980392) , 0 0 5px rgba(0,0,0,0.0980392) , 0 1px 3px rgba(0,0,0,0.298039) , 0 3px 5px rgba(0,0,0,0.2) , 0 5px 10px rgba(0,0,0,0.247059) , 0 10px 10px rgba(0,0,0,0.2) , 0 20px 20px rgba(0,0,0,0.14902) ;*/
+  text-shadow: 1px 1px 0 rgb(217, 130, 33), -1px -1px 0 rgb(217, 136, 35), 1px -1px 0 rgb(215, 126, 33), -1px 1px 0 rgb(214, 156, 72), 4px 4px 8px rgb(139, 0, 0), -4px 4px 8px rgb(139, 0, 0), 4px -4px 8px rgb(139, 0, 0), -4px -4px 8px rgb(139, 0, 0);
+}
+
+#start {
+  width: 80px;
+  font-family: 'Sniglet', cursive;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+#start:active {
+  border-style: none;
+}
+#start:focus {
+  outline: none;
+}
+
+#timerCanvas {
+  /*border: 1px solid black;*/
+  display: none;
+}
+
+div.spoon {
+  margin-top: 10px;
+  margin-left: 50px;
+}
+
+div.spoon-1 {
+  background-color: grey;
+  width: 150px;
+  height: 180px;
+  border-bottom-left-radius: 60%;
+  border-bottom-right-radius: 60%;
+  border-top-left-radius: 65%;
+  border-top-right-radius: 65%;
+  /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.01), 0 6px 20px 0 rgba(0, 0, 0, 0.075);*/
+}
+
+div.start-button {
+  margin: auto;
+}
+
+div.spoon-2 {
+  background-color: grey;
+  width: 30px;
+  height: 265px;
+  border-radius: 8px;
+  margin-left: 63px;
+  margin-top: -5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  z-index: -1;
+}
+
 
 div.word {
   background-color: white;
@@ -29,12 +100,12 @@ div.word {
 }
 
 #scoreCanvas {
-  border: 1px solid black;
+  /*border: 1px solid black;*/
 }
 
 div.bowl-bottom {
   position: absolute;
-  top: 199px;
+  top: 215px;
   z-index: -1;
   width: 610px;
   height: 300px;
@@ -49,6 +120,10 @@ div.score {
   background-color: white;
   margin: 0 auto;
   width: 100px;
+}
+
+div.game {
+  width: 610px;
 }
 
 div.bowl{
