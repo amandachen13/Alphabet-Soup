@@ -61,6 +61,22 @@ div.title {
   display: none;
 }
 
+div.napkin {
+  margin-top: 13px;
+  margin-left: 30px;
+  border-radius: 13px;
+  background: white;
+  background-image: url('./assets/images/napkin.jpg');
+  width: 220px;
+  height: 450px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+  /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
+}
+
+div.start-button {
+  margin: auto;
+}
+
 div.spoon {
   margin-top: 13px;
   margin-left: 50px;
@@ -77,9 +93,6 @@ div.spoon-1 {
   /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.01), 0 6px 20px 0 rgba(0, 0, 0, 0.075);*/
 }
 
-div.start-button {
-  margin: auto;
-}
 
 div.spoon-2 {
   background-color: grey;
@@ -93,12 +106,16 @@ div.spoon-2 {
 }
 
 
+div.steam {
+
+}
+
 div.word {
   background-color: white;
   border-radius: 8px;
-  width: 400px;
-  margin: 0 auto;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  width: 300px;
+  margin: 15px auto 0;
+  /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
 }
 
 #scoreCanvas {
@@ -107,7 +124,7 @@ div.word {
 
 div.bowl-bottom {
   position: absolute;
-  top: 215px;
+  top: 365px;
   z-index: -1;
   width: 610px;
   height: 300px;
@@ -115,13 +132,11 @@ div.bowl-bottom {
   border-bottom-right-radius: 1200px;
   background-color: white;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
 }
 
 div.score {
-  background-color: white;
-  margin: 0 auto;
   width: 100px;
+  margin: auto;
 }
 
 div.game {
