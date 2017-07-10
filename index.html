@@ -4,8 +4,9 @@
     <meta charset="utf-8">
     <title>Alphabet Soup</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="./style.css"></link>
-    <link href="https://fonts.googleapis.com/css?family=Sniglet" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./css/style.css"></link>
+    <link rel="stylesheet" href="./css/font-awesome/css/font-awesome.min.css"></link>
+    <link href="https://fonts.googleapis.com/css?family=Sniglet" rel="stylesheet"></link>
     <script type="text/javascript" src="./lib/bundle.js"></script>
   </head>
   <body>
@@ -14,39 +15,73 @@
         ALPHABET SOUP
       </div>
 
-      <div class="napkin">
-        <div class="start-button">
-          <button id="start">Start!</button>
-          <canvas id="timerCanvas" height="50" width="100"></canvas>
+      <div class="napkin-background">
+        <div class="napkin">
+          <div class="start-button">
+            <button id="start">Start!</button>
+            <canvas id="timerCanvas" height="50" width="100"></canvas>
+          </div>
         </div>
       </div>
     </div>
     <div class="game">
-      <div class="steam">
-        <canvas id="steamCanvas" height="150" width="500"></canvas>
+      <div id="instructions-modal">
+        <div class="instructions">
+          How To Play:
+        </div>
+        <div class="play-button">
+          <button id="play">Play!</button>
+        </div>
       </div>
-      <div class="bowl">
-        <canvas id="0" height="100" width="200">
-        </canvas>
-        <canvas id="1" height="100" width="200">
-        </canvas>
-        <canvas id="2" height="100" width="200">
-        </canvas>
-        <canvas id="3" height="100" width="200">
-        </canvas>
-        <canvas id="4" height="100" width="200">
-        </canvas>
-        <canvas id="5" height="100" width="200">
-        </canvas>
+
+      <div id="end-game-modal">
+        <div class="end-game">
+          Game Over
+        </div>
+        <div class="end-score">Your Score: </div>
+        <div class="responses">
+          <ul>
+          </ul>
+        </div>
+        <div class="play-button">
+          <button id="play-again">Play Again!</button>
+        </div>
       </div>
-      <div class="bowl-bottom"></div>
-      <div class="word">
-        <canvas id="wordCanvas" height="75" width="300"></canvas>
+
+      <div id="game-view">
+        <div class="steam">
+          <div id="steam1"></div>
+          <div id="steam2"></div>
+          <div id="steam3"></div>
+        </div>
+        <div class="bowl">
+          <canvas id="0" height="100" width="200">
+          </canvas>
+          <canvas id="1" height="100" width="200">
+          </canvas>
+          <canvas id="2" height="100" width="200">
+          </canvas>
+          <canvas id="3" height="100" width="200">
+          </canvas>
+          <canvas id="4" height="100" width="200">
+          </canvas>
+          <canvas id="5" height="100" width="200">
+          </canvas>
+        </div>
+        <div class="bowl-bottom"></div>
+        <div class="word">
+          <canvas id="wordCanvas" height="75" width="300"></canvas>
+        </div>
+        <br></br>
       </div>
-      <br></br>
-      <br></br>
     </div>
     <div class="other">
+      <div class="links">
+        <div class="github"><a class="fa fa-github" href="https://github.com/amandachen13/Alphabet-Soup"></a></div>
+        <div class="linkedin"><a class="fa fa-linkedin-square" href="https://www.linkedin.com/in/amanda-chen-4179b6ba/"></a></div>
+        <div class="angellist"><i class="fa fa-angellist" aria-hidden="true"></i></div>
+        <div class="portfolio"><i class="fa fa-user" aria-hidden="true"></i></div>
+      </div>
       <div class="spoon">
         <div class="spoon-1">
           <div class="score">

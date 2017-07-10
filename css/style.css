@@ -1,5 +1,5 @@
 html {
-  background-image: url('./assets/images/blue-tablecloth-background.jpg');
+  background-image: url('./../assets/images/blue-tablecloth-background.jpg');
 }
 
 canvas {
@@ -39,6 +39,7 @@ div.title {
 }
 
 #start {
+  display: none;
   width: 80px;
   font-family: 'Sniglet', cursive;
   font-size: 18px;
@@ -51,9 +52,9 @@ div.title {
 #start:active {
   border-style: none;
 }
+
 #start:focus {
   outline: none
-
 }
 
 #timerCanvas {
@@ -61,59 +62,123 @@ div.title {
   display: none;
 }
 
-div.napkin {
+div.napkin-background {
+  background-color: white;
   margin-top: 13px;
   margin-left: 30px;
   border-radius: 13px;
-  background: white;
-  background-image: url('./assets/images/napkin.jpg');
+  width: 220px;
+  height: 450px;
+  z-index: 0;
+}
+
+div.napkin {
+  position: relative;
+  border-radius: 13px;
+  /*background: white;*/
+  /*background-image: url('./assets/images/napkin.png');*/
   width: 220px;
   height: 450px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
   /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
 }
 
-div.start-button {
-  margin: auto;
-}
-
-div.spoon {
-  margin-top: 13px;
-  margin-left: 50px;
-}
-
-div.spoon-1 {
-  background-color: grey;
-  width: 150px;
-  height: 180px;
-  border-bottom-left-radius: 60%;
-  border-bottom-right-radius: 60%;
-  border-top-left-radius: 65%;
-  border-top-right-radius: 65%;
-  /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.01), 0 6px 20px 0 rgba(0, 0, 0, 0.075);*/
-}
-
-
-div.spoon-2 {
-  background-color: grey;
-  width: 30px;
-  height: 265px;
-  border-radius: 8px;
-  margin-left: 63px;
-  margin-top: -5px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+div.napkin:after {
+  content : "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: white;
+  background-image: url('./../assets/images/napkin.png');
+  width: 100%;
+  height: 100%;
+  opacity : 0.35;
   z-index: -1;
 }
 
+div.start-button {
+  margin: auto;
+  z-index: 1;
+}
 
 div.steam {
+  height: 160px;
+  margin: 0 auto;
+  width: 225px;
+  display: -webkit-box;
+}
 
+#steam1, #steam2, #steam3 {
+  display: none;
+  height: 150px;
+  width: 75px;
+  background-size: 100% 100%;
+  background-image: url('./../assets/images/steam.png')
+}
+
+#instructions-modal {
+  margin: auto;
+  width: 400px;
+  height: 500px;
+  background: white;
+  border-radius: 15px;
+}
+
+#play {
+  width: 80px;
+  font-family: 'Sniglet', cursive;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.075);
+}
+
+#play:active {
+  border-style: none;
+}
+
+#play:focus {
+  outline: none
+}
+
+#play-again {
+  width: 80px;
+  font-family: 'Sniglet', cursive;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.075);
+}
+
+#play-again:active {
+  border-style: none;
+}
+
+#play-again:focus {
+  outline: none
+}
+
+#game-view {
+  display: none;
+}
+
+#end-game-modal {
+  display: none;
+  margin: auto;
+  width: 400px;
+  height: 500px;
+  background: white;
+  border-radius: 15px;
 }
 
 div.word {
   background-color: white;
   border-radius: 8px;
   width: 300px;
+  height: 50px;
   margin: 15px auto 0;
   /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
 }
@@ -143,7 +208,7 @@ div.game {
   width: 610px;
 }
 
-div.bowl{
+div.bowl {
   padding-top: 50px;
   width: 600px;
   height: 310px;
@@ -156,4 +221,66 @@ div.bowl{
 
 #wordCanvas {
 
+}
+
+div.links {
+  height: 165px;
+  padding-top: 15px;
+}
+
+a {
+  text-decoration: none;
+  color: #e8c264;
+}
+
+div.github, div.linkedin, div.angellist, div.portfolio {
+  font-size: 36px;
+  color: #e8c264;
+  text-shadow: 1px 1px 0 rgb(217, 130, 33), -1px -1px 0 rgb(217, 136, 35), 1px -1px 0 rgb(215, 126, 33), -1px 1px 0 rgb(214, 156, 72), 4px 4px 8px rgb(139, 0, 0), -4px 4px 8px rgb(139, 0, 0), 4px -4px 8px rgb(139, 0, 0), -4px -4px 8px rgb(139, 0, 0);
+  padding-bottom: 5px;
+}
+
+div.github {
+  padding-left: 165px;
+}
+
+div.linkedin {
+  margin-top: -15px;
+  padding-left: 75px;
+}
+
+div.angellist {
+  padding-left: 135px;
+}
+
+div.portfolio {
+  margin-top: -15px;
+  padding-left: 45px;
+}
+
+div.spoon {
+  margin-top: 7px;
+  margin-left: 35px;
+}
+
+div.spoon-1 {
+  background-color: grey;
+  width: 150px;
+  height: 180px;
+  border-bottom-left-radius: 60%;
+  border-bottom-right-radius: 60%;
+  border-top-left-radius: 65%;
+  border-top-right-radius: 65%;
+  /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.01), 0 6px 20px 0 rgba(0, 0, 0, 0.075);*/
+}
+
+div.spoon-2 {
+  background-color: grey;
+  width: 32px;
+  height: 283px;
+  border-radius: 8px;
+  margin-left: 61px;
+  margin-top: -6px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  z-index: -1;
 }
