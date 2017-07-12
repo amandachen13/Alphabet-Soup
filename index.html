@@ -8,6 +8,19 @@
     <link rel="stylesheet" href="./css/font-awesome/css/font-awesome.min.css"></link>
     <link href="https://fonts.googleapis.com/css?family=Sniglet" rel="stylesheet"></link>
     <script type="text/javascript" src="./lib/bundle.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.1.3/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyDhuRANHersSeAXLwxSBG9wZUJaID1Ttw4",
+        authDomain: "alphabetsoup-894b6.firebaseapp.com",
+        databaseURL: "https://alphabetsoup-894b6.firebaseio.com",
+        projectId: "alphabetsoup-894b6",
+        storageBucket: "",
+        messagingSenderId: "951243499635"
+      };
+      firebase.initializeApp(config);
+    </script>
   </head>
   <body>
     <div class="game-controls">
@@ -17,9 +30,11 @@
 
       <div class="napkin-background">
         <div class="napkin">
-          <div class="start-button">
+          <div id="score-words">
             <!-- <button>Start!</button> -->
             <canvas id="scoreCanvas" height="50" width="100"></canvas>
+            <ul class="words-found">
+            </ul>
             <!-- <canvas id="timerCanvas" height="50" width="100"></canvas> -->
           </div>
         </div>
@@ -45,9 +60,13 @@
         <div class="end-game">
           <h2 class="end">Game Over</h2>
           <div class="end-score">Your Score: </div>
+          <input class="username" placeholder="Enter Username"></input>
+          <div class="submit-score">
+            <button id="submit">Submit Score</button>
+          </div>
           <div class="responses">
-            <ul>
-            </ul>
+            <ol>
+            </ol>
           </div>
         </div>
         <div class="play-button">

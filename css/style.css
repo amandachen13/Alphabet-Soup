@@ -97,9 +97,18 @@ div.napkin:after {
   z-index: -1;
 }
 
-div.start-button {
+#score-words {
+  display: none;
   margin: auto;
   z-index: 1;
+}
+
+ul.words-found {
+  width: 125px;
+  height: 300px;
+  background: white;
+  border: 1px solid black;
+  overflow: auto;
 }
 
 div.steam {
@@ -143,6 +152,10 @@ li {
 }
 
 div.play-button {
+  margin: 10px auto 0;
+}
+
+div.submit-score {
   margin: 10px auto 0;
 }
 
@@ -203,6 +216,24 @@ div.end-score {
 }
 
 #play-again:focus {
+  outline: none
+}
+
+#submit {
+  width: 80px;
+  font-family: 'Sniglet', cursive;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.075);
+}
+
+#submit:active {
+  border-style: none;
+}
+
+#submit:focus {
   outline: none
 }
 
