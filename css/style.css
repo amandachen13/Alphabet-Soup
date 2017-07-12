@@ -39,7 +39,7 @@ div.title {
 }
 
 #start {
-  display: none;
+  /*display: none;*/
   width: 80px;
   font-family: 'Sniglet', cursive;
   font-size: 18px;
@@ -110,7 +110,7 @@ div.steam {
 }
 
 #steam1, #steam2, #steam3 {
-  display: none;
+  /*display: none;*/
   height: 150px;
   width: 75px;
   background-size: 100% 100%;
