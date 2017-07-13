@@ -152,11 +152,11 @@ li {
 }
 
 div.play-button {
-  margin: 10px auto 0;
+  margin: 0 auto 5px;;
 }
 
 div.submit-score {
-  margin: 10px auto 0;
+  margin: 5px auto 5px;
 }
 
 #end-game-modal {
@@ -183,6 +183,56 @@ div.end-score {
   margin: 0 auto;
 }
 
+#username {
+  margin: 0 auto;
+  text-align: center;
+  width: 150px;
+}
+
+#username::placeholder {
+  color: gold;
+}
+
+#submit {
+  width: 130px;
+  font-family: 'Sniglet', cursive;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 5px;
+  padding: 5px 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.075);
+}
+
+#submit:active {
+  border-style: inset;
+}
+
+#submit:focus {
+  outline: none
+}
+
+div.high-scores {
+  flex-direction: row;
+}
+
+ul.usernames li {
+  width: 150px;
+  font-size: 18px;
+  list-style: none;
+  text-align: end;
+}
+
+ul.scores {
+  padding-left: 0;
+}
+
+ul.scores li {
+  width: 150px;
+  font-size: 18px;
+  list-style: none;
+}
+
 #play {
   width: 80px;
   font-family: 'Sniglet', cursive;
@@ -194,7 +244,7 @@ div.end-score {
 }
 
 #play:active {
-  border-style: none;
+  border-style: inset;
 }
 
 #play:focus {
@@ -202,7 +252,8 @@ div.end-score {
 }
 
 #play-again {
-  width: 80px;
+  margin: 0 auto;
+  width: 120px;
   font-family: 'Sniglet', cursive;
   font-size: 18px;
   font-weight: bold;
@@ -212,28 +263,10 @@ div.end-score {
 }
 
 #play-again:active {
-  border-style: none;
+  border-style: inset;
 }
 
 #play-again:focus {
-  outline: none
-}
-
-#submit {
-  width: 80px;
-  font-family: 'Sniglet', cursive;
-  font-size: 18px;
-  font-weight: bold;
-  padding: 10px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.075);
-}
-
-#submit:active {
-  border-style: none;
-}
-
-#submit:focus {
   outline: none
 }
 
