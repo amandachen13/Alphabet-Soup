@@ -123,8 +123,9 @@ ul.words-found li {
 div.steam {
   height: 160px;
   margin: 0 auto;
-  width: 225px;
+  width: 275px;
   display: -webkit-box;
+  padding-left: 50px;
 }
 
 #steam1, #steam2, #steam3 {
@@ -137,7 +138,14 @@ div.steam {
 #steamCanvas {
   z-index: 10;
   position: relative;
-  right: 225px;
+  right: 250px;
+}
+
+#multiplierCanvas {
+  z-index: 5;
+  position: relative;
+  right: 250px;
+  bottom: 150px;
 }
 
 #instructions-modal {
