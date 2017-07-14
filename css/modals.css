@@ -1,0 +1,141 @@
+#instructions-modal {
+  margin: auto;
+  width: 400px;
+  height: 500px;
+  background: white;
+  border-radius: 15px;
+  border: 10px solid #e8c264;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.29);
+}
+
+div.instructions {
+  padding: 15px 0;
+}
+
+div.play-button {
+  margin: 0 auto 5px;;
+}
+
+#start {
+  /*display: none;*/
+  width: 80px;
+  font-family: 'Sniglet', cursive;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.075);
+}
+
+#start:active {
+  border-style: inset;
+}
+
+#start:focus {
+  outline: none
+}
+
+#end-game-modal {
+  display: none;
+  margin: auto;
+  width: 400px;
+  height: 500px;
+  background: white;
+  border-radius: 15px;
+  border: 10px solid darkred;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.29);
+}
+
+div.end-game {
+  padding: 15px 0 5px;
+}
+
+h2.end {
+  padding-left: 0;
+  margin: 0 auto;
+}
+
+div.end-score {
+  font-size: 28px;
+  margin: 0 auto;
+}
+
+#username {
+  font-size: 14px;
+  padding: 5px;
+  margin: 5px auto 0;
+  text-align: center;
+  width: 150px;
+  border-radius: 4px;
+  border-style: dashed;
+}
+
+#username::placeholder {
+  color: #e8c264;
+}
+
+#username:focus {
+  outline: none;
+}
+
+div.submit-score {
+  margin: 5px auto 5px;
+}
+
+#submit {
+  width: 130px;
+  font-family: 'Sniglet', cursive;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.075);
+}
+
+#submit:active {
+  border-style: inset;
+}
+
+#submit:focus {
+  outline: none
+}
+
+div.high-scores {
+  flex-direction: row;
+}
+
+ul.usernames li {
+  width: 150px;
+  font-size: 18px;
+  list-style: none;
+  text-align: end;
+}
+
+ul.scores {
+  padding-left: 0;
+}
+
+ul.scores li {
+  width: 150px;
+  font-size: 18px;
+  list-style: none;
+}
+
+#play-again {
+  margin: 0 auto;
+  width: 120px;
+  font-family: 'Sniglet', cursive;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.075);
+}
+
+#play-again:active {
+  border-style: inset;
+}
+
+#play-again:focus {
+  outline: none
+}

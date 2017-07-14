@@ -31,30 +31,7 @@ div.title {
   font-weight: bold;
   margin-right: 45px;
   color: #e8c264;
-  /*text-shadow: 1px 1px 0 rgb(77,162,252) , -1px -1px 0 rgb(77,162,252) , 1px -1px 0 rgb(77,162,252) , -1px 1px 0 rgb(77,162,252) , 4px 4px 8px rgb(44,88,137) , -4px 4px 8px rgb(44,88,137) , 4px -4px 8px rgb(44,88,137) , -4px -4px 8px rgb(44,88,137) ;*/
-
-  /*text-shadow: 3px 3px 0 rgb(101, 179, 227) , 4px 4px 0 rgb(101, 179, 227) , 5px 5px 0 rgb(101, 179, 227) , 6px 6px 0 rgb(101, 179, 227) , 7px 7px 0 rgb(101, 179, 227) , 8px 8px 0 rgb(101, 179, 227) , 9px 9px 0 rgb(101, 179, 227) , 10px 10px 0 rgb(101, 179, 227) , 11px 11px 0 rgb(101, 179, 227) , 12px 12px 0 rgb(101, 179, 227) , 13px 13px 0 rgb(101, 179, 227) , 14px 14px 0 rgb(101, 179, 227) , 15px 15px 0 rgb(101, 179, 227) , 16px 16px 0 rgb(101, 179, 227) , 17px 17px 0 rgb(101, 179, 227) , 18px 18px 0 rgb(101, 179, 227) , 19px 19px 0 rgb(101, 179, 227) , 20px 20px 0 rgb(101, 179, 227) ;*/
-  /*text-shadow: 0 1px 0 rgb(204,204,204) , 0 2px 0 rgb(201,201,201) , 0 3px 0 rgb(187,187,187) , 0 4px 0 rgb(185,185,185) , 0 5px 0 rgb(170,170,170) , 0 6px 1px rgba(0,0,0,0.0980392) , 0 0 5px rgba(0,0,0,0.0980392) , 0 1px 3px rgba(0,0,0,0.298039) , 0 3px 5px rgba(0,0,0,0.2) , 0 5px 10px rgba(0,0,0,0.247059) , 0 10px 10px rgba(0,0,0,0.2) , 0 20px 20px rgba(0,0,0,0.14902) ;*/
   text-shadow: 1px 1px 0 rgb(217, 130, 33), -1px -1px 0 rgb(217, 136, 35), 1px -1px 0 rgb(215, 126, 33), -1px 1px 0 rgb(214, 156, 72), 4px 4px 8px rgb(139, 0, 0), -4px 4px 8px rgb(139, 0, 0), 4px -4px 8px rgb(139, 0, 0), -4px -4px 8px rgb(139, 0, 0);
-}
-
-#start {
-  /*display: none;*/
-  width: 80px;
-  font-family: 'Sniglet', cursive;
-  font-size: 18px;
-  font-weight: bold;
-  padding: 10px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.075);
-}
-
-#start:active {
-  border-style: inset;
-}
-
-#start:focus {
-  outline: none
 }
 
 #timerCanvas {
@@ -120,48 +97,6 @@ ul.words-found li {
   padding: 0 5px;
 }
 
-div.steam {
-  height: 160px;
-  margin: 0 auto;
-  width: 275px;
-  display: -webkit-box;
-  padding-left: 50px;
-}
-
-#steam1, #steam2, #steam3 {
-  height: 150px;
-  width: 75px;
-  background-size: 100% 100%;
-  background-image: url('./../assets/images/steam.png')
-}
-
-#steamCanvas {
-  z-index: 10;
-  position: relative;
-  right: 250px;
-}
-
-#multiplierCanvas {
-  z-index: 5;
-  position: relative;
-  right: 250px;
-  bottom: 150px;
-}
-
-#instructions-modal {
-  margin: auto;
-  width: 400px;
-  height: 500px;
-  background: white;
-  border-radius: 15px;
-  border: 10px solid #e8c264;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.29);
-}
-
-div.instructions {
-  padding: 15px 0;
-}
-
 h2 {
   font-size: 36px;
   padding-left: 25px;
@@ -173,192 +108,14 @@ li {
   padding-right: 20px;
 }
 
-div.play-button {
-  margin: 0 auto 5px;;
-}
-
-div.submit-score {
-  margin: 5px auto 5px;
-}
-
-#end-game-modal {
-  margin: auto;
-  width: 400px;
-  height: 500px;
-  background: white;
-  border-radius: 15px;
-  border: 10px solid darkred;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.29);
-}
-
-div.end-game {
-  padding: 15px 0 5px;
-}
-
-h2.end {
-  padding-left: 0;
-  margin: 0 auto;
-}
-
-div.end-score {
-  font-size: 28px;
-  margin: 0 auto;
-}
-
-#username {
-  font-size: 14px;
-  padding: 5px;
-  margin: 5px auto 0;
-  text-align: center;
-  width: 150px;
-}
-
-#username::placeholder {
-  color: #e8c264;
-}
-
-#username:focus {
-  outline: none;
-}
-
-#submit {
-  width: 130px;
-  font-family: 'Sniglet', cursive;
-  font-size: 16px;
-  font-weight: bold;
-  padding: 5px 10px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.075);
-}
-
-#submit:active {
-  border-style: inset;
-}
-
-#submit:focus {
-  outline: none
-}
-
-div.high-scores {
-  flex-direction: row;
-}
-
-ul.usernames li {
-  width: 150px;
-  font-size: 18px;
-  list-style: none;
-  text-align: end;
-}
-
-ul.scores {
-  padding-left: 0;
-}
-
-ul.scores li {
-  width: 150px;
-  font-size: 18px;
-  list-style: none;
-}
-
-#play {
-  width: 80px;
-  font-family: 'Sniglet', cursive;
-  font-size: 18px;
-  font-weight: bold;
-  padding: 10px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.075);
-}
-
-#play:active {
-  border-style: inset;
-}
-
-#play:focus {
-  outline: none
-}
-
-#play-again {
-  margin: 0 auto;
-  width: 120px;
-  font-family: 'Sniglet', cursive;
-  font-size: 18px;
-  font-weight: bold;
-  padding: 10px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.075);
-}
-
-#play-again:active {
-  border-style: inset;
-}
-
-#play-again:focus {
-  outline: none
-}
-
-#game-view {
-  display: none;
-}
-
-#end-game-modal {
-  display: none;
-  margin: auto;
-  width: 400px;
-  height: 500px;
-  background: white;
-  border-radius: 15px;
-}
-
-div.word {
-  background-color: white;
-  border-radius: 8px;
-  width: 300px;
-  height: 50px;
-  margin: 15px auto 0;
-  /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
-}
-
 #scoreCanvas {
   position: relative;
   left: 26.5px;
-  /*border: 1px solid black;*/
-}
-
-div.bowl-bottom {
-  position: absolute;
-  top: 365px;
-  z-index: -1;
-  width: 610px;
-  height: 300px;
-  border-bottom-left-radius: 1200px;
-  border-bottom-right-radius: 1200px;
-  background-color: white;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 div.score {
   width: 100px;
   margin: auto;
-}
-
-div.game {
-  width: 610px;
-}
-
-div.bowl {
-  padding-top: 50px;
-  width: 600px;
-  height: 310px;
-  border-radius: 50%;
-  border: 5px solid white;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.01), 0 6px 20px 0 rgba(0, 0, 0, 0.075);
-  display: table;
-  background-color: darkred;
-}
-
-#wordCanvas {
-
 }
 
 div.links {
