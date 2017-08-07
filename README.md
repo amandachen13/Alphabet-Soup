@@ -65,7 +65,9 @@ class TrieNode {
 }
 ```
 
-### ANOTHER FEATURE
+### Player Feedback
+
+The player receives visual feedback when they type and submit a word.
 
 ### High Scores
 

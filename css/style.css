@@ -128,11 +128,15 @@ a {
   color: #e8c264;
 }
 
-div.github, div.linkedin, div.angellist, div.portfolio {
+div.github, div.linkedin, div.angellist, div.portfolio, div.sound {
   font-size: 36px;
   color: #e8c264;
   text-shadow: 1px 1px 0 rgb(217, 130, 33), -1px -1px 0 rgb(217, 136, 35), 1px -1px 0 rgb(215, 126, 33), -1px 1px 0 rgb(214, 156, 72), 4px 4px 8px rgb(139, 0, 0), -4px 4px 8px rgb(139, 0, 0), 4px -4px 8px rgb(139, 0, 0), -4px -4px 8px rgb(139, 0, 0);
   padding-bottom: 5px;
+}
+
+div.sound {
+  margin-bottom: -25px;
 }
 
 div.github {
