@@ -69,6 +69,60 @@ class TrieNode {
 
 The player receives visual feedback when they type and submit a word, animated using HTML5 Canvas.
 
+When the player types a letter, the bowl object will check to see if it contains that letter, and if so, the bowl will replace that letter with an empty string. Then, the word object will add that letter to its word string. If the player presses backspace, the last letter of the word will be removed and add back into the bowl. Since the game continuously renders both the bowl canvas and the word canvas, the player can easily see their letter selection and deselection.
+
+```javascript
+document.addEventListener("keydown", (e) => {
+  if (Word.KEYS[e.keyCode]) {
+    if (game.word.word.length < 6) {
+      let idx = (game.bowl.chars().indexOf(Word.KEYS[e.keyCode]));
+      if (idx > -1) {
+        game.bowl.letters[idx] = "";
+        game.word.word += Word.KEYS[e.keyCode];
+      }
+    }
+    return;
+  }
+
+  switch (e.keyCode) {
+    case 8:  // backspace
+      if (game.word.word.length === 0) {
+        break;
+      }
+      let last = game.word.word.substr(-1);
+      let emptyIdx = game.bowl.letters.indexOf("");
+      game.bowl.letters[emptyIdx] = new Letter(last);
+      game.word.word = game.word.word.slice(0, -1);
+      break;
+    // ...
+  }
+
+  // ...
+})
+```
+
+When the player submits a word, a feedback phrase will be generated depending on the validity of the word. The steam canvas above the bowl will then render the phrase with a continuously decreasing y-value, creating a floating effect. On submission of a valid word, the steam canvas will also show the point value and the score canvas will update.
+
+```javascript
+render: function() {
+  // ...
+
+  if (game.float > -20 && game.feedback === "TRY AGAIN") {
+    this.steamCtx.fillText(game.feedback, steamCanvas.width/2, steamCanvas.height/2 + game.float);
+    game.float--;
+  } else if (game.float > -20) {
+    this.steamCtx.fillText(game.feedback, steamCanvas.width/2, steamCanvas.height/2 + game.float);
+    this.multiplierCtx.fillText(`+${game.adder}`, steamCanvas.width/2, steamCanvas.height/2 + 15 + game.float);
+    game.float--;
+  } else {
+    this.steamCtx.fillText("", steamCanvas.width/2, steamCanvas.height/2 + game.float);
+    this.multiplierCtx.fillText("", steamCanvas.width/2, steamCanvas.height/2 + 20 + game.float);
+  }
+
+  // ...
+}
+```
+
 ### High Scores
 
 Player names and scores are stored in a Firebase realtime database and persist between sessions and different computers. At the end of the game, the top ten high scores are displayed and the player has the option to submit their name and score.
