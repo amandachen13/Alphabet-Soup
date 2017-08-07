@@ -61,7 +61,7 @@ class TrieNode {
   }
   addChild(node) {
     this.children[node.char] = node;
-
+  }
 }
 ```
 
@@ -69,6 +69,36 @@ class TrieNode {
 
 ### High Scores
 
-## Future Improvements
+Player names and scores are stored in a Firebase realtime database and persist between sessions and different computers. At the end of the game, the top ten high scores are displayed and the player has the option to submit their name and score.
 
-### ...
+```javascript
+// submits player name and score
+let newScore = firebase.database().ref("scores").push();
+window.newScore = newScore;
+game.username = $("#username").val();
+if (game.username) {
+  newScore.set({username: game.username, score: game.score});
+} else {
+  newScore.set({username: "User", score: game.score});
+}
+
+// fetches and displays top ten high scores
+var scoresTable = firebase.database().ref("scores");
+scoresTable.orderByChild("score").limitToLast(10).on('value', (snapshot, highscores) => {
+  $(".usernames li").remove();
+  $(".scores li").remove();
+  highscores = [];
+  snapshot.forEach(childSnapshot => {
+    highscores.push((childSnapshot.val()));
+  });
+  highscores.reverse();
+  for (let i = 0; i < highscores.length; i++) {
+    let $li = $('<li>');
+    $(".usernames").append($li.text(`${highscores[i].username}`));
+  }
+  for (let i = 0; i < highscores.length; i++) {
+    let $li = $('<li>');
+    $(".scores").append($li.text(`${highscores[i].score}`));
+  }
+});
+```
