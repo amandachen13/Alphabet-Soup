@@ -67,7 +67,7 @@ class TrieNode {
 
 ### Player Feedback
 
-The player receives visual feedback when they type and submit a word.
+The player receives visual feedback when they type and submit a word, animated using HTML5 Canvas.
 
 ### High Scores
 
